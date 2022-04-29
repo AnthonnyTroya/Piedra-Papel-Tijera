@@ -24,15 +24,17 @@ cutbtn.addEventListener("click", () => {
 });
 // Variables para mostrar el resultado
 const resultText = document.getElementById("start-text");
-const userImg = document.getElementById("user-img");
-const machineImg = document.getElementById("machine-img");
+const userImg = document.getElementById("userimg");
+const machineImg = document.getElementById("machineimg");
 
 
 function play(userOption) {
-    const machineOption = Math.floor(Math.random() * 3);
+    const machineOption = calcMachineOption();
     const result = calcResult(userOption, machineOption);
-    userImg.src = "img/" + userOption + ".jpg";
-    machineImg.src = "img/" + machineOption + ".jpg";
+
+    // Printeado por pantalla con las imagenes + texto
+    userImg.src = "img/" + userOption + ".svg";
+    machineImg.src = "img/" + machineOption + ".svg";
 
 
     switch (result) {
@@ -47,6 +49,18 @@ function play(userOption) {
             break;
     }
 
+}
+
+function calcMachineOption() {
+    const number = Math.floor(Math.random() * 3);
+    switch (number) {
+        case 0:
+            return rock;
+        case 1:
+            return paper;
+        case 2:
+            return cut;
+    }
 }
 
 function calcResult(userOption, machineOption) {

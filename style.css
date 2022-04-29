@@ -11,22 +11,24 @@
     max-width: 420px;
     max-height: 745px;
     margin: 0 auto;
-    background-color: rgb(166, 189, 181);
+    background-color: rgb(202, 190, 190);
     justify-content: space-between;
     height: 100vh;
     border: 5px solid;
-    box-shadow: 5px 5px 5px rgb(28, 28, 29);
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px rgb(28, 28, 29);
 }
 
 footer {
     text-align: center;
-    padding: 10px;
+    color: white;
+    font-size: 20px;
 }
 
 h1 {
     text-align: center;
     font-size: 30px;
-    padding: 20px;
+    color: white;
 }
 
 #result {
@@ -42,9 +44,28 @@ h1 {
     padding: 20px;
 }
 
+#result p {
+    font-size: 20px;
+    background-color: white;
+    border: 2px solid rgb(0, 0, 0);
+    width: 50%;
+}
+
 #groupbtn {
     display: flex;
     width: 100%;
+    margin: auto;
+}
+
+button {
+    margin: 5px;
+    border: 3px solid white;
+    background-color: transparent;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(23, 0, 40);
 }
 
 #groupbtn>button>img {
